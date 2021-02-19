@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: solid 1px;
+           
+        }
+
+        #buttonWrap {
+            margin-bottom: 20px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="buttonWrap">
+        <button onclick="darker()">Darker</button>
+        <button onclick="redder()">Redder</button>
+    </div>
+
+    <div id="box">
+    </div>
+
+    <script>
+    let i = 0;
+    let b = document.getElementById("box");
+    let colors = ["#ff0000", "#cc0000", "#990000", "#660000", "#330000", "#000000"];
+
+    function darker() {
+        b.style.backgroundColor = colors[i];
+        i++;
+    }
+    function redder(){
+        b.style.backgroundColor = colors[i];
+        i--;
+    }
+
+
+
+    </script>
+
+</body>
+
+</html>

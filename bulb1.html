@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Training</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="page-black">
+
+    <div class="playground playground-black">
+
+        <button onclick="lightTheBulb()">Light bulb</button>
+
+        <img id="bulb1" src="img/bulb-off.jpg" class="bulb" />
+    </div>
+
+    <script>
+
+    //     let toggleLight = false;
+    //     let x = document.getElementsByClassName("playground playground-black");
+        
+    //     function lightTheBulb() {
+    //         toggleLight = !toggleLight;
+    //         x[0].innerHTML = toggleLight ? '<img src="img/bulb-off.jpg" />' : '<img src="img/bulb-on.jpg">';
+          
+    //   }
+
+    //   let toggleLight = false;
+    //     let x = document.getElementsByClassName("bulb");
+        
+    //     function lightTheBulb() {
+    //         toggleLight = !toggleLight;
+    //         x[0].innerHTML = toggleLight ? '<img src="img/bulb-on.jpg" class="bulb" />' : '<img src="img/bulb-off.jpg" class="bulb">';
+          
+    //   }
+    let toggleLight = false;
+
+    function lightTheBulb() {
+        toggleLight = !toggleLight;
+        document.getElementById("bulb1").src = `img/bulb-${toggleLight ? 'on' : 'off' }.jpg`
+    }
+    </script>
+
+</body>
+
+</html>
