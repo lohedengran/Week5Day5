@@ -30,14 +30,11 @@
             mittElement.style.xxxxxx = .....
         
         */
-       
+       let toggleGreen = false;
+       let h = document.getElementById("rubbe");
        function toggleGreenColor() {
-        let h = document.getElementById("rubbe");
-        if (h.style.color === "black") {
-            h.style.color = "green"
-        } else {
-            h.style.color = "black"
-        }            
+      toggleGreen = !toggleGreen;    
+      h.style.color = toggleGreen ? "green" : "black";    
         }
 
         /*
@@ -72,10 +69,10 @@
         b.addEventListener("mouseout", mouseOut);
         function mouseOver(){
             b.style.color = "red"
-        }
+        };
         function mouseOut(){
             b.style.color = "black"
-        }
+        };
 
     </script>
 
